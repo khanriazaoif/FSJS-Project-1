@@ -7,6 +7,11 @@ var quotes;
 var quote;
 var source;
 
+function getRandomQuote() {
+    var quote = Math.floor(Math.random() * quotes) + 1;
+}
+
+
 
 var quotes = [
     {
