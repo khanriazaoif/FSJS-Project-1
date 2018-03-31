@@ -1,4 +1,4 @@
-quotes = [
+var quotes = [
     {
         quote: '“The Way Get Started Is To Quit Talking And Begin Doing.”',
         source: 'Walt Disney'
