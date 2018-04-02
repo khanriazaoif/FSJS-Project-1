@@ -1,22 +1,32 @@
 var quotes = [
     {
-        quote: '“The Way Get Started Is To Quit Talking And Begin Doing.”',
-        source: 'Walt Disney'
+        quote: '“Have the courage to follow your heart and intuition. They somehow know what you truly want to become. Eveything else is secondary."',
+        source: 'Steve Jobs',
+        citation: "Steve Jobs’s 2005 commencement address at Stanford University.",
+        year: 2005
     },
     {
-        quote: '“The Pessimist Sees Difficulty In Every Opportunity. The Optimist Sees Opportunity In Every Difficulty.”',
-        source: 'Winston Churchill'
+        quote: '“Here\'s to the crazy ones. The misfits. The rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently. They\'re not fond of rules. And they have no respect for the status quo. You can quote them, disagree with them, glorify or vilify them. About the only thing you can\'t do is ignore them. Because they change things. They push the human race forward. While some see them as the crazy ones, we see genius. Because the people who are crazy enough to think they can change the world, are the ones who do.”',
+        source: '',
+        citation: 'Apple TV Ad',
+        year: 1998
     },
     {
-        quote: '“Don’t Let Yesterday Take Up Too Much Of Today.”',
-        source: 'Will Rogers'
+        quote: '“It Just Works.”',
+        source: 'Apple.inc',
+        citation: 'WWDC',
+        year: 2011
     },
     {
-        quote: '“You Learn More From Failure Than From Success. Don’t Let It Stop You. Failure Builds Character.”',
-        source: 'Unknown'
+        quote: '“Everyone wants a MacBook Pro because they are so bitchin.”',
+        source: 'Steve Jobs',
+        citation: 'Apple Shareholders Meeting',
+        year: 2006
     },
     {
-        quote: '“It’s Not Whether You Get Knocked Down, It’s Whether You Get Up.”',
-        source: 'Vince Lombardi'
+        quote: '“Here’s to those who have always seen things differently. The ones who follow a vision, not a path. Where others percieve first as valuable, you value the first thing that actually matters. While others are distracted by the new, you focus on the significance of a whole new take. Even before you could see how, you never doubted we would change things. And then we did. Together.”',
+        source: '',
+        citation: 'Apple Keynote Address',
+        year: 2014
     },
 ];
