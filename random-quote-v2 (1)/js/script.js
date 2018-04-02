@@ -26,8 +26,11 @@ function printQuote() {
     outputDiv = document.getElementById('quote-box');
     outputDiv.innerHTML = 
         '<p class="quote">' + quote.quote + '</p>' +
-        '<p class="source">' + quote.source + '</p>';
-    console.log("This is my random quote: " + quote.quote);
+        '<p class="source">' + quote.source +
+            '<span class="citation">' + quote.citation + '</span>' +
+            '<span class="year">' + quote.year + '</span>' +
+        '</p>';
+    console.log(quote.quote + ' ' + quote.source + ' ' + quote.citation + ' ' + quote.year);
 }
 
 
