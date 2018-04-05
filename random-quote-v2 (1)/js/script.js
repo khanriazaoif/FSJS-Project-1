@@ -5,7 +5,6 @@
 
 var quote
 var randomIndex;
-var source;
 var outputDiv;
 
 
@@ -27,13 +26,20 @@ function printQuote() {
     outputDiv = document.getElementById('quote-box');
     outputDiv.innerHTML = 
         '<p class="quote">' + quote.quote + '</p>' +
-        '<p class="source">' + quote.source +
-            '<span class="citation">' + quote.citation + '</span>' +
-            '<span class="year">' + quote.year + '</span>' +
-        '</p>';
+        '<p class="source">' + quote.source + '</p>';
+        if(quote.citation !== undefined) {
+           // outputDiv.innerHTML =
+            outputDiv += '<span class="citation">' + quote.citation + '</span>'
+        }
+       
+        //    '<span class="citation">' + quote.citation + '</span>' +
+        //    '<span class="year">' + quote.year + '</span>' +
+        
     console.log(quote.quote + ' ' + quote.source + ' ' + quote.citation + ' ' + quote.year);
     console.log(quote.source);
 }
+
+console.log(quote.citation);
 
 
 
