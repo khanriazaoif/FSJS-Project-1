@@ -6,7 +6,7 @@
 var quote
 var randomIndex;
 var outputDiv;
-
+let string;
 
 function getRandomQuote() {
     var randomIndex = Math.floor(Math.random() * quotes.length);
@@ -24,23 +24,16 @@ function printQuote() {
     
 
     outputDiv = document.getElementById('quote-box');
-    outputDiv.innerHTML = 
-        '<p class="quote">' + quote.quote + '</p>' +
+    outputDiv.innerHTML = string;
+       string = '<p class="quote">' + quote.quote + '</p>' +
         '<p class="source">' + quote.source + '</p>';
-        if(quote.citation !== undefined) {
-           // outputDiv.innerHTML =
-            outputDiv += '<span class="citation">' + quote.citation + '</span>'
-        }
-       
-        //    '<span class="citation">' + quote.citation + '</span>' +
-        //    '<span class="year">' + quote.year + '</span>' +
+        if(quote.citation || quote.year) {
+            string += '<span class="citation">' + quote.citation + '</span>' +
+            '<span class="year">' + quote.year + '</span>'
+        } return string;
         
     console.log(quote.quote + ' ' + quote.source + ' ' + quote.citation + ' ' + quote.year);
-    console.log(quote.source);
 }
-
-console.log(quote.citation);
-
 
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
