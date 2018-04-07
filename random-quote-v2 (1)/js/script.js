@@ -10,12 +10,12 @@ let string;
 var nIntervId;
  
     function changeColor() {
-      nIntervId = setInterval(flashText, 1000);
+      nIntervId = setInterval(flashBackground, 1000);
     }
 
-    function flashText() {
+    function flashBackground() {
         var oElem = document.getElementById('my_box');
-        oElem.style.color = oElem.style.color == 'red' ? 'blue' : 'red';
+        document.body.style.backgroundColor = document.body.style.backgroundColor == 'red' ? 'blue' : 'red';
       }
    
 
