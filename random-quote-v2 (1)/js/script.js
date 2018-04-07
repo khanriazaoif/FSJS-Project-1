@@ -21,19 +21,25 @@ printQuote();
 
 function printQuote() {
     quote = getRandomQuote();
-    
-
-    outputDiv = document.getElementById('quote-box');
-    outputDiv.innerHTML = string;
-       string = '<p class="quote">' + quote.quote + '</p>' +
+		string = '<p class="quote">' + quote.quote + '</p>' +
         '<p class="source">' + quote.source + '</p>';
-        if(quote.citation || quote.year) {
-            string += '<span class="citation">' + quote.citation + '</span>' +
-            '<span class="year">' + quote.year + '</span>'
-        } return string;
+        if(quote.citation) {
+            string += '<span class="citation">' + quote.citation + '</span>' 
+            } else {
+            	string;
+            }
+        if(quote.year) {
+        	string += '<span class="year">' + quote.year + '</span>'
+        } else {
+        	string;
+        }
+    
+       outputDiv = document.getElementById('quote-box');
+    outputDiv.innerHTML = string;
         
     console.log(quote.quote + ' ' + quote.source + ' ' + quote.citation + ' ' + quote.year);
 }
+
 
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
