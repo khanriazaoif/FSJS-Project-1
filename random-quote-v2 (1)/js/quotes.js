@@ -1,13 +1,13 @@
 var quotes = [
     {
-        quote: '“Have the courage to follow your heart and intuition. They somehow know what you truly want to become. Eveything else is secondary."',
+        quote: '“Have the courage to follow your heart and intuition."',
         source: 'Steve Jobs',
         citation: "Steve Jobs’s 2005 commencement address at Stanford University.",
         year: 2005
     },
     
     {
-        quote: '“Here\'s to the crazy ones. The misfits. The rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently.”',
+        quote: '“Here\'s to the crazy ones. The misfits. The rebels. The troublemakers.”',
         source: 'Apple.inc',
         citation: 'Apple TV Ad',
         year: ''
@@ -27,7 +27,7 @@ var quotes = [
     },
     
     {
-        quote: '“Here’s to those who have always seen things differently. The ones who follow a vision, not a path. Where others percieve first as valuable, you value the first thing that actually matters.”',
+        quote: '“Here’s to those who have always seen things differently. The ones who follow a vision, not a path.”',
         source: 'Apple.inc',
         citation: 'Apple Keynote Address',
         year: 2014
