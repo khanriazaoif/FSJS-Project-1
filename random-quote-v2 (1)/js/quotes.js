@@ -1,5 +1,5 @@
 var quotes = [
-   /* {
+    {
         quote: '“Have the courage to follow your heart and intuition. They somehow know what you truly want to become. Eveything else is secondary."',
         source: 'Steve Jobs',
         citation: "Steve Jobs’s 2005 commencement address at Stanford University.",
@@ -25,7 +25,7 @@ var quotes = [
         citation: 'Apple Shareholders Meeting',
         year: 2006
     },
-     */
+    
     {
         quote: '“Here’s to those who have always seen things differently. The ones who follow a vision, not a path. Where others percieve first as valuable, you value the first thing that actually matters.”',
         source: 'Apple.inc',

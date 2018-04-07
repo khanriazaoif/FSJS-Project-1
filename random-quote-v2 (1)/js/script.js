@@ -7,6 +7,17 @@ var quote
 var randomIndex;
 var outputDiv;
 let string;
+var nIntervId;
+ 
+    function changeColor() {
+      nIntervId = setInterval(flashText, 1000);
+    }
+
+    function flashText() {
+        var oElem = document.getElementById('my_box');
+        oElem.style.color = oElem.style.color == 'red' ? 'blue' : 'red';
+      }
+   
 
 function getRandomQuote() {
     var randomIndex = Math.floor(Math.random() * quotes.length);
@@ -37,7 +48,7 @@ function printQuote() {
        outputDiv = document.getElementById('quote-box');
     outputDiv.innerHTML = string;
         
-    console.log(quote.quote + ' ' + quote.source + ' ' + quote.citation + ' ' + quote.year);
+  //  console.log(quote.quote + ' ' + quote.source + ' ' + quote.citation + ' ' + quote.year);
 }
 
 
