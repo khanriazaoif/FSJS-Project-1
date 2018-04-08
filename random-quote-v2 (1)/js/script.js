@@ -9,7 +9,7 @@ var nIntervId;
 var color;
 // function changeColor
 function changeColor() {
-	nIntervId = setInterval(flashBackground, 3000);
+	nIntervId = setInterval(flashBackground, 6000);
 }
 // this function getRandomColor creats two variables. var color holds the symbol # and var letters holds a 16 character string that together combine into a hex color. The for loop takes the letters and uses math.floor and math.random * 16 to generate a different string each iteration of the loop. The variable color then returns the new random hex color.
 function getRandomColor() {
