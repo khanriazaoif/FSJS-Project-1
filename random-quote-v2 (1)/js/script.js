@@ -22,7 +22,8 @@ function getRandomColor() {
 }
 // this function flashBackground has a variable oElem that selects the ID 'my_box' and changes the background of the color of the document to the color that was created in the getRandomColor function.     
 function flashBackground() {
-	var oElem = document.getElementById('my_box').style.backgroundColor == getRandomColor();
+    var oElem = document.body.style.backgroundColor = "red";
+    // == getRandomColor();
 }
 // this function getRandomQuote creates a variabled called randomIndex that generates a number between 1 and the number of quotes that I have created. The function then returns the quote inside the quotes array using the randomIndex number that came from the math.floor and math.random.
 function getRandomQuote() {
