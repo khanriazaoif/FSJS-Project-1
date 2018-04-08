@@ -35,18 +35,12 @@ function printQuote() {
 	string = '<p class="quote">' + quote.quote + '</p>' + '<p class="source">' + quote.source + '</p>';
 	if (quote.citation) {
 		string += '<span class="citation">' + quote.citation + '</span>'
-	} else {
-		string;
-	}
+	} 
 	if (quote.year) {
 		string += '<span class="year">' + quote.year + '</span>'
-	} else {
-		string;
-	}
+	} 
 	if (quote.tags) {
 		string += '<span class ="tags">' + ' ' + quote.tags + '</span>'
-	} else {
-		string;
 	}
 	outputDiv = document.getElementById('quote-box');
 	outputDiv.innerHTML = string;
