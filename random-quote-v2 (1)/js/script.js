@@ -8,14 +8,23 @@ var randomIndex;
 var outputDiv;
 let string;
 var nIntervId;
+var color;
  
     function changeColor() {
       nIntervId = setInterval(flashBackground, 1000);
     }
 
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
     function flashBackground() {
-        var oElem = document.getElementById('my_box');
-        document.body.style.backgroundColor = document.body.style.backgroundColor == 'red' ? 'blue' : 'red';
+        var oElem = document.getElementById('my_box').style.backgroundColor == getRandomColor();
       }
    
 
@@ -23,12 +32,10 @@ function getRandomQuote() {
     var randomIndex = Math.floor(Math.random() * quotes.length);
     return quotes[randomIndex];
 }
-console.log(getRandomQuote() );
 
-
-console.log(quotes);
 printQuote();
-
+getRandomColor();
+flashBackground();
 
 function printQuote() {
     quote = getRandomQuote();
@@ -48,9 +55,6 @@ function printQuote() {
        outputDiv = document.getElementById('quote-box');
     outputDiv.innerHTML = string;
         
-  //  console.log(quote.quote + ' ' + quote.source + ' ' + quote.citation + ' ' + quote.year);
 }
-
-
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
