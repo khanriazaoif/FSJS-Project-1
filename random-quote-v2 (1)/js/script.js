@@ -5,11 +5,16 @@ var quote
 var randomIndex;
 var outputDiv;
 let string;
-var nIntervId;
+var changeBackgroundColor;
 var color;
+var changeQuoteInterval
 // function changeColor
 function changeColor() {
-	nIntervId = setInterval(flashBackground, 6000);
+	changeBackgroundColor = setInterval(flashBackground, 6000);
+}
+//
+function changeQuote() {
+    changeQuoteInterval = setInterval(getRandomQuote,6000);
 }
 // this function getRandomColor creats two variables. var color holds the symbol # and var letters holds a 16 character string that together combine into a hex color. The for loop takes the letters and uses math.floor and math.random * 16 to generate a different string each iteration of the loop. The variable color then returns the new random hex color.
 function getRandomColor() {
@@ -22,7 +27,11 @@ function getRandomColor() {
 }
 // this function flashBackground has a variable oElem that selects the body and changes the background of the color of the document to the color that was created in the getRandomColor function.     
 function flashBackground() {
-    var oElem = document.body.style.backgroundColor = getRandomColor();
+    var fb = document.body.style.backgroundColor = getRandomColor();
+}
+//
+function flashQuote() {
+    var fq = document.getElementById('quote-box') = getRandomQuote();
 }
 // this function getRandomQuote creates a variabled called randomIndex that generates a number between 1 and the number of quotes that I have created. The function then returns the quote inside the quotes array using the randomIndex number that came from the math.floor and math.random.
 function getRandomQuote() {
@@ -49,5 +58,10 @@ function printQuote() {
 printQuote();
 getRandomColor();
 flashBackground();
+//
+function start(){
+    changeColor();
+    changeQuote();
+}
 // this looks ofr  a click event and then runs the function printQuote.
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
