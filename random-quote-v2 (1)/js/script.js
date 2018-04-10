@@ -12,10 +12,6 @@ function getRandomColor() {
 	}
 	return color;
 }
-// function changeColor creates a local variable called cc that takes the document body and changes the background to the hex color that came from the getRandomColor(); function.
-function changeColor() {
-	var cc = document.body.style.backgroundColor = getRandomColor();
-}
 // this function getRandomQuote creates a variabled called randomIndex that generates a number between 1 and the number of quotes that I have created. The function then returns the quote inside the quotes array using the randomIndex number that came from the math.floor and math.random.
 function getRandomQuote() {
 	var randomIndex = Math.floor(Math.random() * quotes.length);
@@ -32,8 +28,8 @@ function changeHandler() {
 
 //this function printQuote has a variable that contains the quote from the getRandomQuote function. It then outputs a string with quote array quote property plus the citation property. These are the two required strings that will always be present. From there I am checking if there is a citation, year or tags and if there are then to display them. At the end the variable outputDiv gets the ID quote-box and changes the HTML to the string that is in the variable string.
 function printQuote() {
+	document.body.style.backgroundColor = getRandomColor();
 	var quote = getRandomQuote();
-	var colorChange = changeColor();
 	var string = '<p class="quote">' + quote.quote + '</p>' + '<p class="source">' + quote.source;
 	if (quote.citation) {
 		string += '<span class="citation">' + quote.citation + '</span>'
