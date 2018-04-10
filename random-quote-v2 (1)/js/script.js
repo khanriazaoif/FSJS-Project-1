@@ -1,15 +1,7 @@
 // event listener to respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
-// declaring variables in the global scope
-var quote;
-var colorChange;
-var randomIndex;
-var outputDiv;
-let string;
-var color;
-var flashTheQuote;
-var changeQuoteInterval;
-// this function getRandomColor creats two variables. var color holds the symbol # and var letters holds a 16 character string that together combine into a hex color. The for loop takes the letters and uses math.floor and math.random * 16 to generate a different string each iteration of the loop. The variable color then returns the new random hex color.
+
+//function getRandomColor creats two variables. var color holds the symbol # and var letters holds a 16 character string that together combine into a hex color. The for loop takes the letters and uses math.floor and math.random * 16 to generate a different string each iteration of the loop. The variable color then returns the new random hex color.
 function getRandomColor() {
 	var letters = '0123456789ABCDEF';
 	var color = '#';
@@ -29,15 +21,20 @@ function getRandomQuote() {
 }
 // function changeQuote creates a local variable named quoteChange that takes the function printQuote and sets it to be selected on an interval of 8000.
 function changeQuote() {
-	var quoteChange = setInterval(printQuote, 8000);
+	var quoteChange = setInterval(printQuote, 30000);
 }
+//
+function stopPrintQuote() {
+	clearInterval(quoteChange);
+  }
 //this function printQuote has a variable that contains the quote from the getRandomQuote function. It then outputs a string with quote array quote property plus the citation property. These are the two required strings that will always be present. From there I am checking if there is a citation, year or tags and if there are then to display them. At the end the variable outputDiv gets the ID quote-box and changes the HTML to the string that is in the variable string.
 function printQuote() {
-	quote = getRandomQuote();
-	colorChange = changeColor();
-	flashTheQuote = changeQuote();
+	var quote = getRandomQuote();
+	var colorChange = changeColor();
+	var flashTheQuote = changeQuote();
+	//var stopSelectingPrintQuote = stopPrintQuote();
 	//changeQuoteInterval = flashQuote();
-	string = '<p class="quote">' + quote.quote + '</p>' + '<p class="source">' + quote.source;
+	var string = '<p class="quote">' + quote.quote + '</p>' + '<p class="source">' + quote.source;
 	if (quote.citation) {
 		string += '<span class="citation">' + quote.citation + '</span>'
 	}
@@ -48,7 +45,7 @@ function printQuote() {
 		string += '<span class ="tags">' + ' ' + quote.tags + '</span>'
 	}
 	'</p>';
-	outputDiv = document.getElementById('quote-box');
+	var outputDiv = document.getElementById('quote-box');
 	outputDiv.innerHTML = string;
 }
 // this looks for  a click event and then runs the function printQuote.
