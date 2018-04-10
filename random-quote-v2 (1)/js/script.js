@@ -33,7 +33,7 @@ function getRandomQuote() {
 // }
 //
 function changeQuote() {
-    var quoteChange = setInterval(getRandomQuote,1000);
+    var quoteChange = setInterval(printQuote,8000);
 }
 //this function printQuote has a variable that contains the quote from the getRandomQuote function. It then outputs a string with quote array quote property plus the citation property. These are the two required strings that will always be present. From there I am checking if there is a citation, year or tags and if there are then to display them. At the end the variable outputDiv gets the ID quote-box and changes the HTML to the string that is in the variable string.
 function printQuote() {
