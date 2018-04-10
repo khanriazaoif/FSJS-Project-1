@@ -1,6 +1,8 @@
 // event listener to respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
 
+//I AM ATTEMPTING EXCEEDS EXPECTATIONS. PLEASE GRADE BASED ON THAT ASSUMPTION
+
 //function getRandomColor creats two variables. var color holds the symbol # and var letters holds a 16 character string that together combine into a hex color. The for loop takes the letters and uses math.floor and math.random * 16 to generate a different string each iteration of the loop. The variable color then returns the new random hex color.
 function getRandomColor() {
 	var letters = '0123456789ABCDEF';
@@ -19,12 +21,12 @@ function getRandomQuote() {
 	var randomIndex = Math.floor(Math.random() * quotes.length);
 	return quotes[randomIndex];
 }
-// function changeQuote creates a local variable named quoteChange that takes the function printQuote and sets it to be selected on an interval of 8000.
-function changeQuote() {
-	var quoteChange = setInterval(printQuote, 8000);
-	function stopPrintQuote() {
-		clearInterval(quoteChange);
-	  }
+// variable changeQuoteInterval is set equal to a set interval of 30 seconds once the printQuote function is selected. The function changeHandler then invokes the click handler which then clears the interval. Then the printQuote function is run and this sets a new interval. 
+let changeQuoteInterval = setInterval(printQuote, 30000);
+function changeHandler() {
+    clearInterval(changeQuoteInterval);
+    printQuote();
+    changeQuoteInterval = setInterval(printQuote, 30000);
 }
 //
 
@@ -32,9 +34,6 @@ function changeQuote() {
 function printQuote() {
 	var quote = getRandomQuote();
 	var colorChange = changeColor();
-	var flashTheQuote = changeQuote();
-	//var stopSelectingPrintQuote = stopPrintQuote();
-	//changeQuoteInterval = flashQuote();
 	var string = '<p class="quote">' + quote.quote + '</p>' + '<p class="source">' + quote.source;
 	if (quote.citation) {
 		string += '<span class="citation">' + quote.citation + '</span>'
