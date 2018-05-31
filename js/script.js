@@ -45,5 +45,3 @@ function changeHandler() {
 }
 // this looks for  a click event and then runs the function printQuote.
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
-printQuote();
